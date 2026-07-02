@@ -126,12 +126,12 @@ seekBar.oninput = () => {
 
 volSlider.oninput = () => {
     video.volume = volSlider.value;
-    muteBtn.innerText = video.volume === 0 ? '🔇' : '🔊';
+    muteBtn.innerText = video.volume === 0 ? '🕪×' : '🔊';
 };
 
 muteBtn.onclick = () => {
     video.muted = !video.muted;
-    muteBtn.innerText = video.muted ? '🔇' : '🔊';
+    muteBtn.innerText = video.muted ? '🕪×' : '🔊';
 };
 
 fsBtn.onclick = toggleFullscreen;
