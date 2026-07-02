@@ -72,7 +72,8 @@ Movie.mp4
 Movie.srt
 ```
 
-The subtitles will load automatically.
+The subtitles will load automatically nor else upload provided
+AND ONLY MP4 FILES NO OTHER FILES DRAG AND DROP MP4 FILES
 
 ## License
 
