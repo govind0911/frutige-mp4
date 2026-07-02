@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 10px;
+    background: #5a7edc;
+    font-family: "Tahoma", "Segoe UI", sans-serif;
+    overflow: hidden;
+    user-select: none;
+}
+
+#player-container {
+    background: linear-gradient(to bottom, #e0e0e0 0%, #b0b0b0 50%, #909090 100%);
+    border: 4px outset #ffffff;
+    border-radius: 12px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 35px);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.6);
+}
+
+#video-screen {
+    background: #000;
+    flex-grow: 1;
+    position: relative;
+    border: 5px inset #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#drop-zone {
+    position: absolute;
+    color: #555;
+    font-weight: bold;
+    font-size: 22px;
+    pointer-events: none;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+#subtitle-overlay {
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    pointer-events: none;
+    text-shadow: 2px 2px 4px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+#controls-panel {
+    padding: 12px;
+    background: linear-gradient(to bottom, #4c4c4c 0%, #2c2c2c 50%, #000000 51%, #111111 100%);
+    border-top: 2px solid #999;
+    margin-top: 8px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: inset 0 1px 3px rgba(255,255,255,0.3);
+}
+
+#timeline-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+#seek-bar {
+    flex-grow: 1;
+    height: 10px;
+    cursor: pointer;
+    background: #222;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+#time-display {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    font-weight: bold;
+    background: #000;
+    padding: 3px 8px;
+    border: 2px inset #444;
+    min-width: 130px;
+    text-align: center;
+}
+
+#button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 40%, #a0a0a0 100%);
+    border: 2px outset #eee;
+    border-radius: 6px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #111;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    text-shadow: 0px 1px 0px #fff;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 40%, #c0c0c0 100%);
+}
+
+button:active {
+    border-style: inset;
+    background: #999;
+    transform: translateY(1px);
+}
+
+.glossy-button {
+    background: radial-gradient(circle at 50% 30%, #6699ff 0%, #003399 100%);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: 3px outset #99ccff;
+    text-shadow: 0px -1px 1px #000;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5), inset 0px 2px 5px rgba(255,255,255,0.4);
+}
+
+.glossy-button:active {
+    border-style: inset;
+    background: radial-gradient(circle at 50% 70%, #003399 0%, #001144 100%);
+}
+
+#volume-slider {
+    width: 80px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 100;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom, #d6d6d6, #a0a0a0);
+    margin: 5% auto;
+    padding: 20px;
+    width: 350px;
+    border: 4px outset #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.8);
+}
+
+.modal-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #113377;
+    border-bottom: 1px solid #888;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222;
+}
+
+select, input[type="number"] {
+    background: #eee;
+    border: 2px inset #fff;
+    padding: 2px;
+}
+
+input[type="range"] {
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="player-container">
+        <div id="video-screen">
+            <video id="main-video"></video>
+            <div id="subtitle-overlay"></div>
+            <div id="drop-zone">DROP MP4 HERE</div>
+        </div>
+
+        <div id="controls-panel">
+            <div id="timeline-container">
+                <input type="range" id="seek-bar" value="0" step="0.1">
+                <div id="time-display">00:00 / 00:00</div>
+            </div>
+
+            <div id="button-row">
+                <div class="group">
+                    <button id="btn-open" title="Open File">📂</button>
+                    <button id="btn-stop">■</button>
+                    <button id="btn-prev-frame">«</button>
+                    <button id="btn-play-pause" class="glossy-button">▶</button>
+                    <button id="btn-next-frame">»</button>
+                </div>
+
+                <div class="group">
+                    <button id="btn-mute">🔊</button>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                </div>
+
+                <div class="group">
+                    <button id="btn-sub-toggle">SUB</button>
+                    <button id="btn-fullscreen">⛶</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sub-settings" class="modal">
+            <div class="modal-content">
+                <h3>Subtitle Controls</h3>
+                <label>Delay: <input type="number" id="sub-delay" value="0" step="0.1">s</label>
+                <label>Size: <input type="range" id="sub-size" min="12" max="48" value="24"></label>
+                <label>Color: <input type="color" id="sub-color" value="#ffffff"></label>
+                <label>BG Opacity: <input type="range" id="sub-bg-opacity" min="0" max="1" step="0.1" value="0.5"></label>
+                <label>Position: 
+                    <select id="sub-pos">
+                        <option value="bottom">Bottom</option>
+                        <option value="middle">Middle</option>
+                        <option value="top">Top</option>
+                    </select>
+                </label>
+                <button id="btn-close-subs">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
