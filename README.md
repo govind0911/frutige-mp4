@@ -73,7 +73,7 @@ Movie.srt
 ```
 
 The subtitles will load automatically nor else upload provided
-AND ONLY MP4 FILES NO OTHER FILES DRAG AND DROP MP4 FILES or https://frutige-mp4.vercel.app/ but not completely working 
+AND ONLY MP4 FILES NO OTHER FILES DRAG AND DROP MP4 FILES or https://frutige-mp4.vercel.app/ but buggy
 
 ## License
 
